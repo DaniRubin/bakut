@@ -1,9 +1,7 @@
 .App {
-  text-align: center;
 }
-
 .App-logo {
-  height: 40vmin;
+  height: 70px;
   pointer-events: none;
 }
 
@@ -14,20 +12,16 @@
 }
 
 .App-header {
+  text-align: center;
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
-
+.app-body {
+  background-color: #F5F5F5;
+}
 .App-link {
   color: #61dafb;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +29,123 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.formControll {
+  margin: 0px 20px !important;
+}
+.MuiBox-root-6 {
+  padding: 10px !important;
+}
+.ButtonShowTlm {
+}
+.refreshButton {
+  padding:6px !important;
+  border-radius: 50px !important;
+  min-width: 10px !important;
+  margin:12px !important;
+}
+.TlmTable {
+  margin: auto !important;
+  width:70% !important;
+}
+.MuiTableCell-head {
+  font-weight: bolder !important;
+}
+.MuiTableCell-root {
+  border: 1px solid
+  rgba(224, 224, 224, 1);
+}
+.MuiTableCell-sizeSmall {
+  padding:1px 24px 1px 16px !important;
+}
+.MuiTableContainer-root {
+  overflow-x: visible !important;
+}
+.PopupContent {
+  background-color:white;
+  border:black 1px solid;
+  padding: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************************/
+/* popup  */
+/***************************************************************/
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: right;
+  background: #D8F4EE;
+}
+
+.popup .popuptext {
+  font-size: 17px;
+  visibility: hidden;
+  background-color: white;
+  color: black;
+  border: 1.5px solid #00000029;
+  border-radius: 6px;
+  padding: 15px;
+  position: absolute;
+  z-index: 1000;
+  top: 145%;
+  left: calc(100% - 175px);
+  width: 290px;
+  height: auto;
+  box-shadow: 0px 3px 6px var(--color18);
+  font-weight: normal !important;
+ }
+.popup:hover .popuptext {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+.popup .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.popuptext::before,
+.popuptext::after {
+  content: "";
+  position: absolute;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  margin-top: 0px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.popuptext::before {
+  border-bottom: 9px solid #2FCFE2;
+  top: -10px;
+}
+
+.popuptext::after {
+  border-bottom: 10px solid white;
+  top: -9px;
+  z-index: 1;
 }

@@ -1,0 +1,17 @@
+{
+    "satellites": [
+        "sat1",
+        "sat2",
+        "sat3",
+        "sat4",
+        "sat5",
+        "sat6",
+        "sat7"
+    ],
+    "sites": [
+        "site1",
+        "site2",
+        "site3"
+    ],
+    "defultSite": "site3"
+}
