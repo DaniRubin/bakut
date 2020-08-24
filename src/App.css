@@ -1,8 +1,14 @@
 .App {
 }
 .App-logo {
-  height: 70px;
+  height: 40px;
   pointer-events: none;
+}
+body {
+  /* padding-bottom: 100px; */
+  height:100% !important;
+  /* overflow: hidden; */
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -18,6 +24,7 @@
 }
 .app-body {
   background-color: #F5F5F5;
+  height: 100vh;
 }
 .App-link {
   color: #61dafb;
@@ -39,15 +46,15 @@
 }
 .ButtonShowTlm {
 }
+.MuiTableHead-root {
+  background-color: #D5D5D5;
+}
 .refreshButton {
   padding:6px !important;
   border-radius: 50px !important;
   min-width: 10px !important;
   margin:12px !important;
-}
-.TlmTable {
-  margin: auto !important;
-  width:70% !important;
+  height: 60%;
 }
 .MuiTableCell-head {
   font-weight: bolder !important;
@@ -66,16 +73,68 @@
   background-color:white;
   border:black 1px solid;
   padding: 5px;
-
 }
 
+.paramsTable {
+  vertical-align: top;
+  overflow-y: scroll;
+  max-height: 33vh;
+  margin-top: 2vh
+}
 
+.irregulatEventsTable {
+  vertical-align: top;
+  overflow-y: scroll;
+  max-height: 40vh;
+}
+.TlmTable {
+  position: absolute;
+  width:45% !important;
+  left:2%;
+  top:25%;
+  right:20%;
+  height: 70%;
+  /* margin-left: 2%;
+  margin-right: 2%; */
+  overflow-y: scroll;
+  display: inline-block;
+  /* max-height: 73vh; */
+  /* margin-top: 2vh; */
+  padding:4px;
+}
 
-
-
-
-
-
+.leftSide {
+  top:25%;
+  position: absolute;
+  width:48% !important;
+  left:50%;
+  height: 70%;
+  vertical-align: top;
+  /* margin-right: 2%; */
+  /* margin-top: 2vh; */
+  display: inline-block;
+}
+.ChoosenLine {
+  background-color: gray !important;
+}
+.selectionPart {
+  height:8vh;
+  overflow: hidden;
+}
+.MuiTabs-flexContainer {
+  height:6vh;
+}
+.App-header{
+  height:6vh;
+}
+.card {
+  width:50%;
+  display: block;
+  float: right;
+  height:80%;
+  padding:5px;
+  box-shadow:  -2px 15px 15px -2px grey;
+}
 
 
 
@@ -90,7 +149,7 @@
   display: inline-block;
   cursor: pointer;
   text-align: right;
-  background: #D8F4EE;
+  /* background: #D8F4EE; */
 }
 
 .popup .popuptext {
@@ -107,7 +166,7 @@
   left: calc(100% - 175px);
   width: 290px;
   height: auto;
-  box-shadow: 0px 3px 6px var(--color18);
+  box-shadow: 0px 3px 6px #00000029;
   font-weight: normal !important;
  }
 .popup:hover .popuptext {
@@ -116,7 +175,7 @@
 }
 .popup .show {
   visibility: visible;
-  animation: fadeIn 1s;
+  animation: fadeIn 0.3s;
 }
 @keyframes fadeIn {
   from {

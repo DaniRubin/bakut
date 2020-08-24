@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+import Checklist from './Checklists/Checklist';
 import Telemetry from './Telemetry/Telemtry';
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -28,11 +28,6 @@ function TabPanel(props) {
 	);
 }
 
-TabPanel.propTypes = {
-	children: PropTypes.node,
-	index: PropTypes.any.isRequired,
-	value: PropTypes.any.isRequired,
-};
 
 function a11yProps(index) {
 	return {
@@ -41,23 +36,20 @@ function a11yProps(index) {
 	};
 }
 
-const useStyles = makeStyles((theme) => ({
-	// root: {
-	// 	flexGrow: 1,
-	// 	backgroundColor: theme.palette.background.paper,
-	// },
-}));
-
+TabPanel.propTypes = {
+	children: PropTypes.node,
+	index: PropTypes.any.isRequired,
+	value: PropTypes.any.isRequired,
+};
 export default function SimpleTabs() {
-	const classes = useStyles();
-	const [value, setValue] = React.useState(0);
+	const [value, setValue] = React.useState(1);
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
 	};
 
 	return (
-		<div className={classes.root}>
+		<div>
 			<AppBar position="static">
 				<Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
 					<Tab label="Telemetry" {...a11yProps(0)} />
@@ -69,7 +61,7 @@ export default function SimpleTabs() {
 				<Telemetry />
 			</TabPanel>
 			<TabPanel value={value} index={1}>
-				Checklists
+				<Checklist />
 			</TabPanel>
 			<TabPanel value={value} index={2}>
 				Problem documentation
